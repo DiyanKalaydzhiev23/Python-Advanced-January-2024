@@ -65,7 +65,7 @@
     - difference (разлика) - А - В - всички различни елементи в А, които не присъстват в В
       </br>
       <img height=150 width=300 src="https://cdn1.byjus.com/wp-content/uploads/2021/07/difference-of-a-and-b.png">
-    - symmetrical difference (симетрична разлика) - всички различни елементи от А, които не присъстват в В и всички елементи от В, които не присъстват в А.
+    - symmetrical difference (симетрична разлика) - A ^ B - всички различни елементи от А, които не присъстват в В и всички елементи от В, които не присъстват в А.
       </br>
       <img height=150 width=300 src="https://cdn1.byjus.com/wp-content/uploads/2021/07/symmetric-difference-between-a-and-b.png">
   - Синтаксис:
