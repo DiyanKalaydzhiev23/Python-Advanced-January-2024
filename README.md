@@ -40,7 +40,7 @@
 
 ---
 
-### Tuples and Sets (Кортежи и множества)
+### 02. Tuples and Sets (Кортежи и множества)
 
 1. Tuples (Кортежи)
    - Read-Only collection
