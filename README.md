@@ -76,7 +76,7 @@
        print(my_set_1.intersection(my_set_2))  # {3, 4}
        print(my_set_1.union(my_set_2))  # {1, 2, 3, 4, 5, 6}
        print(my_set_1.difference(my_set_2))  # {1, 2}
-       print(my_set_2.difference(my_set_1))  # {3, 4}
+       print(my_set_2.difference(my_set_1))  # {5, 6}
        print(my_set_1.symmetric_difference(my_set_2)) # {1, 2, 5, 6}
        print(my_set_2.symmetric_difference(my_set_1)) # {1, 2, 5, 6}
        ```
