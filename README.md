@@ -12,11 +12,9 @@
 
 - [Lists as Stacks and Queues](https://forms.gle/XP8QW5K59yMGQE7N8)
 
----
 
 - [Tuples and Sets](https://forms.gle/AW52AwMsgNbvQfMf7)
 
----
 
 - [Multidimensional Lists](https://forms.gle/h5rchwrtc4jaanzE6)
 
