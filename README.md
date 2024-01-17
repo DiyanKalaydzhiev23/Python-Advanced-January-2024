@@ -11,7 +11,14 @@
 ## Theoretical Tests:
 
 - [Lists as Stacks and Queues](https://forms.gle/XP8QW5K59yMGQE7N8)
+
+---
+
 - [Tuples and Sets](https://forms.gle/AW52AwMsgNbvQfMf7)
+
+---
+
+- [Multidimensional Lists](https://forms.gle/h5rchwrtc4jaanzE6)
 
 ---
 
@@ -80,5 +87,27 @@
        print(my_set_1.symmetric_difference(my_set_2)) # {1, 2, 5, 6}
        print(my_set_2.symmetric_difference(my_set_1)) # {1, 2, 5, 6}
        ```
+---
+
+### 03. Multidimensional Lists (Многомерни Списъци)
+
+   1. Какво представляват многомерните списъци?
+      - Списък от списъци
+        ```py
+        matrix = [
+           [1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9],
+        ]
+        ```
+   2. Как достъпваме даниите в многомерен списък?
+      ```py
+         print(matrix[0][0]  # 1
+         print(matrix[1][1]  # 5
+         print(matrix[2][0]  # 7
+      ```
+      - Казвайки `matrix[0]`, достъпваме списъка на първа позиция, т.е. `[1, 2, 3]`
+      - Казвайки `matrix[0][0]`, достъпваме елемента на индекс **0** в списъка намиращ се на индекс **0**, във външния списък. 
+
 ---
 
