@@ -1,2 +1,1 @@
-def sum(a: int, b: int) -> int:
-    return a + b
+print([x for x in range(100) if all(x % y != 0 for y in range(2, x))])

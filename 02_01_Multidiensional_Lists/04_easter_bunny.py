@@ -1,49 +1,48 @@
-size = int(input())
+size = int(input())  # прочитаме размера на матрицата
 
-matrix = []
-bunny_pos = []  # [row, col]
-best_path = []
+matrix = []  # създаваме променлива, в която да пазим матрицата
+bunny_pos = []  # създаваме променлива, в която да пазим позицията на заека
+best_path = []  # създаваме променлива, в която да пазим най-добрия път
 
-best_direction = None
-max_collected_eggs = float("-inf")
+best_direction = None  # създаваме променлива, в която да пазим най-добрата посока
+max_collected_eggs = float("-inf")  # създаваме променлива, в която да пазим максималния брой яйца
 
-directions = {
-    "up": (-1, 0),
-    "down": (1, 0),
-    "left": (0, -1),
-    "right": (0, 1),
+directions = {  # създаваме променлива, в която да пазим посоките
+    'up': (-1, 0),
+    'down': (1, 0),
+    'left': (0, -1),
+    'right': (0, 1),
 }
 
-for row in range(size):
-    matrix.append(input().split())
+for row in range(size):  # развъртаме цикъл за всеки ред, за да прочетем матрицата
+    matrix.append(input().split())  # прочитаме ред от конзолата, разделяме по спейс и го добавяме към матрицата
 
-    if 'B' in matrix[row]:
-        bunny_pos = [row, matrix[row].index('B')]
+    if 'B' in matrix[row]:  # проверяваме дали заека е на този ред
+        bunny_pos = [row, matrix[row].index('B')]  # ако да, запазваме реда и колоната, на които е заека
 
-for direction, positions in directions.items():
-    row, col = [
+for direction, positions in directions.items():  # развъртаме цикъл за всяка посока и нейните позиции
+    row, col = [  # запазваме новата позиция, като събираме текущата позиция с тази от речника
         bunny_pos[0] + positions[0],
         bunny_pos[1] + positions[1]
     ]
+    path = []  # създаваме променлива, в която да пазим текущия път
+    collected_eggs = 0  # създаваме променлива, в която да пазим броя на събраните яйца за текущата посока
 
-    path = []
-    collected_eggs = 0
+    while 0 <= row < size and 0 <= col < size:  # развъртаме цикъл с условие докато позицията на яйцето е валидна
+        if matrix[row][col] == 'X':  # проверяваме дали имаме капан на текущата позиция
+            break  # прекратяваме цикъла
 
-    while 0 <= row < size and 0 <= col < size:
-        if matrix[row][col] == "X":
-            break
+        collected_eggs += int(matrix[row][col])  # събираме яйцата на текущата позиция с текущите яйца
+        path.append([row, col])  # добавяме текущата позиция към текущия път
 
-        collected_eggs += int(matrix[row][col])
-        path.append([row, col])
+        row += positions[0]  # събираме текущия ред с реда от посоката, в която се движим
+        col += positions[1]  # събираме текущата колона с колоната от посоката, в която се движим
 
-        row += positions[0]
-        col += positions[1]
+    if collected_eggs >= max_collected_eggs:  # EDGE: проверяваме дали текущите яйца са повече или равни на максималните
+        max_collected_eggs = collected_eggs  # обновяваме максималния брой яйца
+        best_direction = direction  # обновяваме най-добрата посока
+        best_path = path  # обновяваме най-добрия път
 
-    if collected_eggs >= max_collected_eggs:
-        max_collected_eggs = collected_eggs
-        best_direction = direction
-        best_path = path
-
-print(best_direction)
-print(*best_path, sep="\n")  # [[1, 2], [3, 4], ...]
-print(max_collected_eggs)
+print(best_direction)  # принтираме най-добрата посока
+print(*best_path, sep='\n')  # принтираме най-добрия път
+print(max_collected_eggs)  # принтираме максималния брой яйца
