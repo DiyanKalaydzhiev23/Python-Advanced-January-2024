@@ -20,6 +20,8 @@
 
 - [Functions](https://forms.gle/ZEXu7H1VAidyxMx19)
 
+- [Error Handling](https://forms.gle/kz2vCqLuZ8MJhZvX6)
+
 ---
 
 ## Notebook:
@@ -111,7 +113,7 @@
 
 ---
 
-### Functions Advanced
+### 04. Functions Advanced
 
    1. Пакетиране на аргументи.
       - Понякога искаме функция да може да приема различен брой аргументи при всяко извикване.
@@ -189,3 +191,37 @@
       ```
 ---
 
+### 05. Error Handling
+   1. Грешки и Изключения (Errors and Exceptions)
+      - Какво е грешка?
+        - Проблем или дефект, който се появява в програмата, водейки до неочаквано поведение.
+      - Какво е изключение?
+        - Събитие, което се случва по време на изпълнение на програмата и нарушава нейното изпълнение
+
+   2. Типове грешки:
+      </br>
+      <img src="https://chercher.tech/images/python-programming/python-exception-heirarchi.png" width="600" height="300">
+
+   3. Обработване на грешки
+      - С логическите блокове **try**, **except**, ние можем да улавяме грешки
+      ```py
+      def divide_numbers(x, y):
+          try:
+              result = x / y
+          except ZeroDivisionError:  # catches the error, must be included
+              print("Error: You can't divide by zero.")
+          else:  # prints only in the case that we don't have an error, optional
+              print(f"The result is {result}")
+          finally:  # prints no matter the result from the try-except block, optional
+              print("Execution of divide_numbers is complete.")
+      ```
+
+   4. Custom Exceptions
+      - Създаваме клас, който задължително наследява **Exception**
+      ```py
+      class MyException(Exception):
+         pass
+
+      raise MyException  # извикваме грешката
+      ```
+---
