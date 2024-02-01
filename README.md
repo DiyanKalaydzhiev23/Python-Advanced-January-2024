@@ -18,9 +18,14 @@
 
 - [Multidimensional Lists](https://forms.gle/h5rchwrtc4jaanzE6)
 
+
 - [Functions](https://forms.gle/ZEXu7H1VAidyxMx19)
 
+
 - [Error Handling](https://forms.gle/kz2vCqLuZ8MJhZvX6)
+
+
+- [File Handling](https://forms.gle/kPob4JXS4pcF75J27)
 
 ---
 
@@ -224,4 +229,64 @@
 
       raise MyException  # извикваме грешката
       ```
+---
+
+### 06. File Handling
+
+   1. Отваряне на файлове
+      - Използваме функцията **open()**
+      - Тя приема 2 параметъра
+        - Абсолютен или относителен път до файл
+        - Тип на отваряне на файла
+          - **w** - отваря файла за писане, като презаписва предишните данни в него
+          - **x** - създава нов файл и го отваря за писане, ако вече има файл, хвърля грешка
+          - **a** - отваря файла за писане, но добавя към предишните данни, вместо да ги изтрива
+          - **t** - отваря файла в текстове режим, за писане и четене
+          - **b** - binary mode
+          - **+** - добавя четене или писане към съответния режим. Пример: **rw+**
+
+   2. FileNotFoundError
+      ```py
+         try:
+            text_file = open('text.txt', 'r')
+            print("File found")
+         except FileNotFoundError:
+            print("File not found")
+      ```
+
+   3. Методи
+      - readline - прочита n на брой символа
+      ```py
+         file = open("text.txt") # 'Hello, SoftUni!'
+         print(file.readline(5)) # 'Hello
+      ```
+      - readlines - прочита всички редове и връща списък
+      ```py
+         file = open("text.txt")
+         print(file.readlines())
+         # ['Every\n', 'Word\n', 'is\n', 'line']
+      ```
+      - close - затваря файла - **опитваме се да не забравяме затварянето на отворени файлове**
+      ```py
+      file = open('python.txt', 'w')
+      # Creates or opens the file
+      file.write("This is the write command.\n")
+      file.write("It allows us to write in a particular file")
+      file.close()
+      ```
+
+   4. With statement
+      - Отваря файла и когато излезем от блока, го затваря автоматично
+      ```py
+         with open("file.txt", "w") as f:
+            f.write("Hello World!!!")
+      ```
+
+   5. Изтриване на файл
+      ```py
+         import os
+         os.remove("python.txt")
+         os.remove("D:\\text.txt")
+      ```
+
 ---
