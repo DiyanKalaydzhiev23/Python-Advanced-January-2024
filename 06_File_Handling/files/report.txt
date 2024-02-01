@@ -1,0 +1,16 @@
+.css
+- - - style.css
+.html
+- - - home.html
+- - - index.html
+.js
+- - - js_is_nice.js
+.py
+- - - python_is_better.py
+.ts
+- - - makeing_it_more_complex.ts
+.txt
+- - - file.txt
+- - - file_1.txt
+- - - output_2.txt
+- - - report.txt
