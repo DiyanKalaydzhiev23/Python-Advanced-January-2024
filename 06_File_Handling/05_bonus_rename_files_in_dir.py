@@ -12,3 +12,4 @@ for filename in os.listdir(directory):
         new_name = filename.replace(string_to_replace, string_to_replace_with)
         new_file = "/".join(re.split(r"[\\/]", file)[:-1]) + "/" + new_name
         os.rename(file, new_file)
+
