@@ -27,6 +27,8 @@
 
 - [File Handling](https://forms.gle/kPob4JXS4pcF75J27)
 
+- [Modules](https://forms.gle/xCie5pdDdNKXmSWS8)
+
 ---
 
 ## Notebook:
@@ -287,6 +289,46 @@
          import os
          os.remove("python.txt")
          os.remove("D:\\text.txt")
+      ```
+
+---
+
+### 07. Modules
+
+   1. Кавко е модул в Python?
+      - Python файловете, с които работим наричаме модули
+
+   2. Какво наричаме пакет?
+      - Пакетите са колекция от модули
+      - Те имат __init__ файл, в които често се импортват останалите файлове така че да са по-лесно достъпни
+
+   3. Видове Модули:
+      - Built-In
+        - math
+        - tkinter
+        - os
+        - etc.
+      - External - [The Python Package Index - PyPI](https://pypi.org/)
+     
+   4. Запазване на списък с пакети използвани в проекта
+      ```bash
+      pip freeze > requirements.txt
+      ```
+
+   5. Инсталиране на записаните пакети в **requirements.txt**
+      ```bash
+      pip install -r requirements.txt
+      ```
+
+   6. Import modules
+      ```py
+      from mymodule import myfunc
+      ```
+      ```py
+      import mymodule
+      ```
+      ```py
+      import mymodule as my
       ```
 
 ---
